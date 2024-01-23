@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Корзина</title>
+	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<!-- Шрифты -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<header>
+			<div id = "header">
+				<button onClick="location.href='catalog.html'" class = "headerbtn1">BLOSSOM</button>
+				<div class="header-right">
+					<button onClick="location.href='catalog.html'" class = "button">Каталог</button>
+					<div class="around">
+						<button onClick="location.href='cart.html'" class="imagine cart-button"><img src="img/shopping_cart.png"/></button>
+						<div id="cart-counter">0</div>
+					</div>
+				</div>
+			</div>
+		
+		</header>
+		<h1>Корзина</h1>
+		<div class="item-container-text" style="margin-bottom: -30px" >
+			<h4 id= "item" style="width: 60%">Товар</h4>
+			<h4 id= "col" style="width: 10%">Кол-во</h4>
+			<h4 id= "money" style="width: 15%">Цена</h4>
+		</div>
+		
+		<hr style="margin-bottom:20px" size="1" color="#FFFFFF"/>
+		<p id="empty-cart" style="display: none;">Вы еще ничего не добавили</p>
+		<div id="products-container"></div>
+		<hr size="1" color="#FFFFFF" />
+		<div class="item-container">
+			<h3>Итого</h3>
+			<h3 id="price">0</h3>
+		</div>
+		<button id="button" onClick="location.href='order.html'" class="addtocart" style="margin-bottom: 5%; margin-top: 5%;" disabled>Перейти к оформлению</button>
+
+	<script type="module" src="./js/cart.js"></script>
+	<script src="./js/counter.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Оформление заказа</title>
+	<link rel="stylesheet" href="css/order.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<!-- Шрифты -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+	
+	<script> function checkAndRedirect() {
+		const inputField1 = document.getElementById('phone').value;
+		const inputField2 = document.getElementById('adress').value;
+		const inputField3 = document.getElementById('date').value;
+	
+		if (inputField1.trim() !== '' && inputField2.trim() !== '' && inputField3.trim() !== '') {
+		  window.location.href = 'pay.html';
+		} else {
+		  const popup = document.getElementById('popup');
+		  popup.style.opacity = 1;
+	
+		  setTimeout(() => {
+			popup.style.opacity = 0;
+		  }, 1500);
+		}
+	  }</script>
+</head>
+
+<body>
+
+	<header>
+		<div id = "header">
+			<button onClick="location.href='catalog.html'" class = "headerbtn1">BLOSSOM</button>
+			<div class="header-right">
+				<button onClick="location.href='catalog.html'" class = "button">Каталог</button>
+				<div class="around">
+					<button onClick="location.href='cart.html'" class="imagine cart-button"><img src="img/shopping_cart.png"/></button>
+					<div id="cart-counter">0</div>
+				</div>
+			</div>
+		</div>
+	
+	</header>
+
+	<h1>Доставка</h1>
+    <div class="wrapper">
+		<div class="input-data" ><input type="text" width="50%" id="adress"required><div class="underline"></div><label>Адрес</label></div>
+		<div style="width: 32%" class="input-data"><input type="text" required><div class="underline"></div><label>Квартира/Офис</label></div>
+		<div style="width: 32%" class="input-data"><input type="number" required><div class="underline"></div><label>Этаж</label></div>
+		<div style="width: 32%" class="input-data"><input type="number" required><div class="underline"></div><label>Домофон/Код на двери</label></div>
+		<div style="width: 49%" class="input-data"><input type="text" id="phone" required><div class="underline"></div><label>Контактный телефон</label></div>
+		<div style="width: 49%" class="input-data"><input  onfocus="(this.type='date')" onblur="(this.type='text')" id="date" required><div class="underline"></div><label>Дата доставки</label></div>
+		<div class="input-data"><input type="text" required><div class="underline"></div><label>Комментарий к заказу</label></div>
+	</div>
+	<div id="popup"><p style="color: black;">Заполните адрес, телефон и дату</p></div>
+	<button id="button" style="margin-left:auto; width:30%; margin-top: 100px;"  onclick="checkAndRedirect()" class="addtocart">Перейти к оформлению</button>
+
+    <script type="module" src="./js/order.js"></script>
+	
+</body>
+</html>

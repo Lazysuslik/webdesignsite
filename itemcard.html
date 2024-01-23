@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Карточка товара</title>
+	<link rel="stylesheet" href="css/itemcard.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<!-- Шрифты -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<header>
+		<div id = "header">
+			<button onClick="location.href='catalog.html'" class = "headerbtn1">BLOSSOM</button>
+			<div class="header-right">
+				<button onClick="location.href='catalog.html'" class = "button">Каталог</button>
+				<div class="around">
+					<button onClick="location.href='cart.html'" class="imagine cart-button"><img src="img/shopping_cart.png"/></button>
+					<div id="cart-counter">0</div>
+				</div>
+			</div>
+		</div>
+	
+	</header>
+
+		<div id="product"></div>
+
+    <script type="module" src="./js/card.js"></script>
+
+</body>
+</html>

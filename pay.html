@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Оплата</title>
+	<link rel="stylesheet" href="css/pay.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<!-- Шрифты -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+	<script> function checkAndRedirect() {
+		const inputField1 = document.getElementById('name').value;
+		const inputField2 = document.getElementById('card-number').value;
+		const inputField3 = document.getElementById('date').value;
+		const inputField4 = document.getElementById('cvv').value;
+	
+		if (inputField1.trim() !== '' && inputField2.trim() !== '' && inputField3.trim() !== '' && inputField4.trim() !== '') {
+		  window.location.href = 'success.html';
+		} else {
+		  const popup = document.getElementById('popup');
+		  popup.style.opacity = 1;
+	
+		  setTimeout(() => {
+			popup.style.opacity = 0;
+		  }, 1000);
+		}
+	  }</script>
+</head>
+
+<body>
+
+	<header>
+		<div id = "header">
+			<button onClick="location.href='catalog.html'" class = "headerbtn1">BLOSSOM</button>
+			<div class="header-right">
+				<button onClick="location.href='catalog.html'" class = "button">Каталог</button>
+				<div class="around">
+					<button onClick="location.href='cart.html'" class="imagine cart-button"><img src="img/shopping_cart.png"/></button>
+					<div id="cart-counter">0</div>
+				</div>
+			</div>
+		</div>
+	
+	</header>
+	<h1>Оплата</h1>
+    <div class="pay">
+        <div class="mini-cart">
+            <div id="products-container"></div>
+            <hr size="2" color="#FFFFFF"/>
+			<div class="around" style="margin-top: -5%">
+				<h3>Доставка</h3>
+				<h3>200</h3>
+			</div>
+            <hr size="2" color="#FFFFFF"/>
+			<div class="around" style="margin-top: -5%">
+				<h3>Итого</h3>
+				<h3 id="price"></h3>
+			</div>
+        </div>
+        
+        <div class="wrapper">
+            <div class="input-data" ><input type="text" width="50%" id="name" required><div class="underline"></div><label>Имя владельца карты</label></div>
+            <div class="input-data"><input type="text" required id="card-number"><div class="underline"></div><label>Номер карты</label></div>
+            <div style="width: 49%" class="input-data" ><input type="text" required id="date"><div class="underline"></div><label>Дата</label></div>
+            <div style="width: 49%" class="input-data"><input type="text" id="cvv"required><div class="underline"></div><label>CVV/CVC</label></div>
+        </div>
+    </div>
+	<div id="popup"><p style="color: black;">Заполните все поля</p></div>
+	<button id="button" style="margin-left:auto; width:30%; margin-bottom: 5%;"  onclick="checkAndRedirect()" class="addtocart">Оплатить</button>
+
+    <script type="module" src="./js/pay.js"></script>
+	
+</body>
+</html>

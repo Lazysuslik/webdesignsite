@@ -1,0 +1,137 @@
+body{
+	display: flex;
+	flex-direction: column;
+	background-color: #000000;
+	margin-left: 200px;
+	margin-right: 200px;
+	@media (min-width: 768px) and (max-width: 1639px)  {
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+
+	@media (min-width: 425px) and (max-width: 767px)  {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	@media (max-width: 425px){
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+.item-container img{
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	@media (min-width: 768px) and (max-width: 1639px)  {
+		width: 150px;
+		height: 150px;
+	}
+
+	@media (min-width: 425px) and (max-width: 767px)  {
+		width: 100px;
+		height: 100px;
+	}
+	@media (max-width: 425px){
+		width: 80px;
+		height: 80px;
+	}
+}
+
+.grid-container{
+	display: grid;
+	border: solid 1px blue;
+}
+
+.item-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.item-container-text{
+	display: flex;
+	justify-content: space-between;
+	width: 98%;
+}
+
+
+#button{
+	width: 33%;
+	margin-left: auto;
+
+}
+
+#start-price{
+	display: none;
+}
+
+.items-control{
+	color: silver;
+	font-family: 'Forum', serif;
+	font-size: 40px;
+	border: none;
+	background-color: transparent;
+	@media (min-width: 1024px) and (max-width: 1439px)  {
+		font-size: 38px;
+	}
+	@media (min-width: 768px) and (max-width: 1023px)  {
+		font-size: 36px;
+	}
+	@media (min-width: 425px) and (max-width: 767px)  {
+		font-size: 30px;
+	}
+	@media (max-width: 425px){
+		font-size: 23px;
+	}
+}
+.items-control:hover{
+	color: white;
+	font-family: 'Forum', serif;
+	font-size: 40px;
+	border: none;
+	background-color: transparent;
+	@media (min-width: 1024px) and (max-width: 1439px)  {
+		font-size: 38px;
+	}
+	@media (min-width: 768px) and (max-width: 1023px)  {
+		font-size: 36px;
+	}
+	@media (min-width: 425px) and (max-width: 767px)  {
+		font-size: 30px;
+	}
+	@media (max-width: 425px){
+		font-size: 23px;
+	}
+}
+
+.items-current{
+	color: white;
+	font-family: 'Forum', serif;
+	font-size: 40px;
+	@media (min-width: 1024px) and (max-width: 1439px)  {
+		font-size: 38px;
+	}
+	@media (min-width: 768px) and (max-width: 1023px)  {
+		font-size: 36px;
+	}
+	@media (min-width: 425px) and (max-width: 767px)  {
+		font-size: 30px;
+	}
+	@media (max-width: 425px){
+		font-size: 23px;
+	}
+}
+.counter-wrapper{
+	display: flex;
+	align-items: center;
+	width: 20%;
+	justify-content: space-between;
+}
+
+.counter-and-price{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+

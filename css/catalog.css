@@ -1,0 +1,95 @@
+body{
+	display: flex;
+	flex-direction: column;
+	margin-left: 200px;
+	margin-right: 200px;
+  margin-top: 0;
+	@media (min-width: 768px) and (max-width: 1639px)  {
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+
+	@media (min-width: 425px) and (max-width: 767px)  {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	@media (max-width: 425px){
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+.item-container {
+  width: 31.7%;
+  margin: 10px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  transition: transform 0.2s ease-in-out;
+  @media (min-width: 1640px) and (max-width: 1880px) {
+    width: 31.3%;
+  }
+  @media (min-width: 1440px) and (max-width: 1639px) {
+    width: 31.3%;
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    width: 31.6%;
+    margin: 5px;
+    margin-bottom: 80px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 30.8%;
+    margin: 5px;
+    margin-bottom: 80px;
+  }
+
+	@media (min-width: 425px) and (max-width: 767px)  {
+		width: 47.8%;
+    margin: 2px;
+    margin-bottom: 70px;
+	}
+	@media (max-width: 425px){
+		width: 47%;
+    margin: 2px;
+    margin-bottom: 50px;
+	}
+}
+
+  html {
+    height: 100%;
+    background-image: url('/img/main1.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+	  background-color: #010201;
+
+}
+
+  .item-container:hover {
+      transform: scale(1.05); /* Увеличиваем размер при наведении */
+    }
+
+
+  .imagine img {
+	max-width: 100%;
+	height: auto;
+  }
+
+.details{
+	display: flex;
+	justify-content: space-between;
+}
+
+.text{
+  width: 50%;
+  margin-left: auto;
+  @media (max-width: 767px){
+    width: 100%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px)  {
+    width: 75%;
+  }
+}
+

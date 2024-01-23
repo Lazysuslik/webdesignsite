@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Каталог</title>
+	<link rel="stylesheet" href="css/catalog.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<!-- Шрифты -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+	<script>
+
+		function scrollToBlock() {
+    	var targetBlock = document.getElementById('target-block');
+    	if (targetBlock) {
+      	targetBlock.scrollIntoView({ behavior: 'smooth' });
+    	}
+  		}
+		</script>
+</head>
+
+<body>
+	<header>
+	<div id="fixed">
+		<div id = "header">
+			<button onClick="location.href='catalog.html'" class = "headerbtn1">BLOSSOM</button>
+			<div class="header-right">
+				<button onclick="scrollToBlock()" class = "button">Каталог</button>
+				<div class="around">
+					<button onClick="location.href='cart.html'" class="imagine cart-button"><img src="img/shopping_cart.png"/></button>
+					<div id="cart-counter">0</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</header>
+
+	<h1 style="width:50%; margin-bottom: 20%; margin-top: 40%; ">Букеты <br>С Доставкой</h1>
+	<p class="text">Эксклюзивные цветочные букеты и композиции с доставкой прямо к порогу вашего дома. Каждый букет — это произведение искусства, созданное с любовью и вниманием к деталям. Мы стремимся привнести в вашу жизнь нежность природы, запечатлеть моменты радости и подарить уникальные впечатления.
+Мы используем только самые свежие и изысканные цветы, чтобы каждый букет стал настоящим произведением искусства, способным простоять несколько недель в вашем доме.</p>
+		<h1 style="margin-top: 10%;" id="target-block">Каталог</h1>
+			<div id="products-container"></div>
+	<script type="module"  src="./js/renderProducts.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+body{
+	display: flex;
+	flex-direction: column;
+	background-color: #000000;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.item-container img{
+	width: 185px;
+	height: 185px;
+	object-fit: cover;
+}
+
+.grid-container{
+	display: grid;
+	border: solid 1px blue;
+}
+
+.item-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.small-container{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+	margin-top: 6%;
+}
